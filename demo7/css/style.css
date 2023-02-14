@@ -814,7 +814,7 @@ color: #aa8453;
 
 
 /* ======= Menu style ======= */
-.cappa-wrap {
+.Attentive-wrap {
     display: block;
     background: #fff;
     right: 0;
@@ -837,30 +837,30 @@ color: #aa8453;
     border: none;
     border-left: 1px solid #f4f4f4
 }
-.cappa-wrap.cappa-wrap-show {
+.Attentive-wrap.Attentive-wrap-show {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%);
 }
-.cappa-logo-wrap {
+.Attentive-logo-wrap {
     position: relative;
     z-index: 1021;
 }
-.cappa-menu {}
-.cappa-menu ul {
+.Attentive-menu {}
+.Attentive-menu ul {
     position: relative;
     margin-top: 180px;
     margin-bottom: 30px;
     padding: 0;
 }
-.cappa-menu ul ul {
+.Attentive-menu ul ul {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
 }
-.cappa-menu ul li,
-.cappa-menu ul li a {
+.Attentive-menu ul li,
+.Attentive-menu ul li a {
     margin: 0;
     padding: 0;
     border: 0;
@@ -871,7 +871,7 @@ color: #aa8453;
     -o-transition: .3s all ease;
     transition: .3s all ease;
 }
-.cappa-menu ul li {
+.Attentive-menu ul li {
     margin: 10px 0 10px 0;
     padding: 0 0 10px 0;
     list-style: none;
@@ -883,7 +883,7 @@ color: #aa8453;
     line-height: 1.5em;
     border-bottom: 1px solid #f4f4f4;
 }
-.cappa-menu ul ul li {
+.Attentive-menu ul ul li {
     margin: 5px 0 0px 0;
     padding: 0 0 0px 0;
     list-style: none;
@@ -892,7 +892,7 @@ color: #aa8453;
     border-bottom: none;
 }
 
-.cappa-menu ul li a {
+.Attentive-menu ul li a {
     color: #222;
     text-decoration: none;
     position: relative;
@@ -902,27 +902,27 @@ color: #aa8453;
     font-weight: 400;
     text-transform: uppercase;
 }
-.cappa-menu ul li a {
+.Attentive-menu ul li a {
     display: inline-block;
 }
-.cappa-menu ul li a:after {
+.Attentive-menu ul li a:after {
     content: '';
     display: block;
     width: 0;
 }
-.cappa-menu ul li a:hover::after {
+.Attentive-menu ul li a:hover::after {
     width: 100%;
 }
-.cappa-menu ul li a.active {
+.Attentive-menu ul li a.active {
     color: #aa8453;
 }
-.cappa-menu ul li a.active:after {
+.Attentive-menu ul li a.active:after {
     height: 0px;
 }
-.cappa-menu ul ul {
+.Attentive-menu ul ul {
     display: none;
 }
-.cappa-menu > ul > li > a {
+.Attentive-menu > ul > li > a {
     font-family: 'Barlow', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -935,7 +935,7 @@ color: #aa8453;
     transition: 0.3s;
     letter-spacing: 0.5px;
 }
-.cappa-menu > ul > li.open > a {
+.Attentive-menu > ul > li.open > a {
     font-family: 'Barlow', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -948,7 +948,7 @@ color: #aa8453;
     transition: 0.3s;
     letter-spacing: 0.5px;
 }
-.cappa-menu ul ul li a {
+.Attentive-menu ul ul li a {
     color: #222;
     text-decoration: none;
     position: relative;
@@ -964,21 +964,21 @@ color: #aa8453;
     text-transform: none;
 }
 
-.cappa-menu ul li:hover > a,
-.cappa-menu ul li.open > a,
-.cappa-menu ul li.active > a,
-.cappa-menu ul ul li:hover > a,
-.cappa-menu ul ul li.open > a,
-.cappa-menu ul ul li.active > a {
+.Attentive-menu ul li:hover > a,
+.Attentive-menu ul li.open > a,
+.Attentive-menu ul li.active > a,
+.Attentive-menu ul ul li:hover > a,
+.Attentive-menu ul ul li.open > a,
+.Attentive-menu ul ul li.active > a {
     color: #aa8453;
 }
-.cappa-menu ul ul ul li a {
+.Attentive-menu ul ul ul li a {
     margin-left: 24px;
     padding-top: 0px;
 }
 
-.cappa-menu ul li a em,
-.cappa-menu ul ul li a em {
+.Attentive-menu ul li a em,
+.Attentive-menu ul ul li a em {
     font-size: 10px;
     background-color: #aa8453;
     padding: 1px 6px;
@@ -992,19 +992,19 @@ color: #aa8453;
 
 
 /* navigation footer */
-.cappa-menu-footer {
+.Attentive-menu-footer {
     position: relative;
     bottom: 30px;
     left: 0;
     padding: 90px 0px 0px 0px;
     color: #999;
 }
-.cappa-menu-footer p {
+.Attentive-menu-footer p {
     color: #999;
     margin: 0;
     font-size: 15px;
 }
-.cappa-menu-footer a {
+.Attentive-menu-footer a {
     color: #aa8453;
 }
 .separator {
@@ -1018,33 +1018,33 @@ color: #aa8453;
     margin: 10px 0;
 }
 @media screen and (max-width: 768px) {
-    .cappa-menu-footer {
+    .Attentive-menu-footer {
 
     }   
 }
 
 
 /* reservation field for slider */
-.cappa-menu-footer div.reservation {
+.Attentive-menu-footer div.reservation {
     margin: 0;
     top: 0;
     left: 40px;
     height: 60%;
     z-index: 9;
 }
-.cappa-menu-footer div.reservation .call {
+.Attentive-menu-footer div.reservation .call {
     color: #222;
     font-weight: 400;
     font-size: 15px;
     margin-top: 0px;
     margin-left: 60px;
 } 
-.cappa-menu-footer div.reservation .call span {
+.Attentive-menu-footer div.reservation .call span {
 font-family: 'Gilda Display', serif;
     font-size: 24px;
     color: #aa8453;
 } 
-.cappa-menu-footer div.reservation .icon {
+.Attentive-menu-footer div.reservation .icon {
     position: absolute;
     left: 0;
     /* top: -50px; */
@@ -1055,22 +1055,22 @@ font-family: 'Gilda Display', serif;
     animation: pulse 2s infinite;
     border-radius: 100%;
 }
-.cappa-menu-footer div.reservation a .icon i {
+.Attentive-menu-footer div.reservation a .icon i {
     color: #aa8453;
     font-size: 24px;
 }
-.cappa-menu-footer div.reservation a .icon:hover {
+.Attentive-menu-footer div.reservation a .icon:hover {
     border: 1px solid #aa8453;
 }
 @media screen and (max-width: 768px) {
-    .cappa-menu-footer div.reservation {
+    .Attentive-menu-footer div.reservation {
         display: none;
     }
 }
 
 
 /* ======= Menu header style ======= */
-.cappa-header {
+.Attentive-header {
     padding: 0;
     position: absolute;
     top: 0;
@@ -1078,7 +1078,7 @@ font-family: 'Gilda Display', serif;
     width: 100%;
     padding-top: 40px;
 }
-.cappa-header .cappa-logo {
+.Attentive-header .Attentive-logo {
     line-height: 0;
     padding: 0;
     color: #fff;
@@ -1086,20 +1086,20 @@ font-family: 'Gilda Display', serif;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
-.cappa-header .cappa-logo img {
+.Attentive-header .Attentive-logo img {
     width: 160px;
 }
-.cappa-header .social li {
+.Attentive-header .social li {
     display: inline-block;
 }
-.cappa-header .social li a {
+.Attentive-header .social li a {
     color: #fff;
     padding: 0 10px;
 }
-.cappa-header .heading {
+.Attentive-header .heading {
     color: #fff;
 }
-.cappa-header.scrolled {
+.Attentive-header.scrolled {
     position: fixed;
     padding: 25px 0;
     top: 0;
@@ -1113,13 +1113,13 @@ font-family: 'Gilda Display', serif;
     -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
     box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
 }
-.cappa-header.scrolled .social {
+.Attentive-header.scrolled .social {
     margin-top: 10px;
 }
-.cappa-header.scrolled .social li a {
+.Attentive-header.scrolled .social li a {
     color: #fff;
 }
-.cappa-header.scrolled .cappa-logo {
+.Attentive-header.scrolled .Attentive-logo {
     line-height: 1em;
     padding: 0;
     color: #fff;
@@ -1127,10 +1127,10 @@ font-family: 'Gilda Display', serif;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
-.cappa-header.scrolled .cappa-nav-toggle {
+.Attentive-header.scrolled .Attentive-nav-toggle {
     top: -1px !important;
 }
-.cappa-header.awake {
+.Attentive-header.awake {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -1138,7 +1138,7 @@ font-family: 'Gilda Display', serif;
     -ms-transform: translateY(0%);
     transform: translateY(0%);
 }
-.cappa-header.sleep {
+.Attentive-header.sleep {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -1146,19 +1146,19 @@ font-family: 'Gilda Display', serif;
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
 }
-.cappa-nav-toggle {
+.Attentive-nav-toggle {
     top: -3px !important;
 }
-.cappa-nav-toggle i,
-.cappa-nav-toggle i:before,
-.cappa-nav-toggle i:after {
+.Attentive-nav-toggle i,
+.Attentive-nav-toggle i:before,
+.Attentive-nav-toggle i:after {
     background: #b19777 !important;
 }
-.cappa-wrap-burger-wrap {
+.Attentive-wrap-burger-wrap {
     position: relative;
     z-index: 1022;
 }
-.cappa-nav-toggle {
+.Attentive-nav-toggle {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -1172,16 +1172,16 @@ font-family: 'Gilda Display', serif;
     display: none;
     border-bottom: none !important;
 }
-.cappa-nav-toggle:hover i:before {
+.Attentive-nav-toggle:hover i:before {
     top: -7px;
 }
-.cappa-nav-toggle:hover i:after {
+.Attentive-nav-toggle:hover i:after {
     bottom: -7px;
 }
-.cappa-nav-toggle.active i {
+.Attentive-nav-toggle.active i {
     background: transparent !important;
 }
-.cappa-nav-toggle.active i:before {
+.Attentive-nav-toggle.active i:before {
     top: 0px;
     -webkit-transform: rotateZ(45deg);
     -moz-transform: rotateZ(45deg);
@@ -1189,7 +1189,7 @@ font-family: 'Gilda Display', serif;
     -o-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
 }
-.cappa-nav-toggle.active i:after {
+.Attentive-nav-toggle.active i:after {
     bottom: 0;
     -webkit-transform: rotateZ(-45deg);
     -moz-transform: rotateZ(-45deg);
@@ -1197,13 +1197,13 @@ font-family: 'Gilda Display', serif;
     -o-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
 }
-.cappa-nav-toggle:hover,
-.cappa-nav-toggle:focus,
-.cappa-nav-toggle:active {
+.Attentive-nav-toggle:hover,
+.Attentive-nav-toggle:focus,
+.Attentive-nav-toggle:active {
     outline: none;
     border-bottom: none !important;
 }
-.cappa-nav-toggle i {
+.Attentive-nav-toggle i {
     position: relative;
     display: -moz-inline-stack;
     display: inline-block;
@@ -1219,8 +1219,8 @@ font-family: 'Gilda Display', serif;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
-.cappa-nav-toggle i:before,
-.cappa-nav-toggle i:after {
+.Attentive-nav-toggle i:before,
+.Attentive-nav-toggle i:after {
     content: '';
     width: 30px;
     height: 1px;
@@ -1231,10 +1231,10 @@ font-family: 'Gilda Display', serif;
     -o-transition: 0.2s;
     transition: 0.2s;
 }
-.cappa-nav-toggle i:before {
+.Attentive-nav-toggle i:before {
     top: -6px;
 }
-.cappa-nav-toggle i:after {
+.Attentive-nav-toggle i:after {
     bottom: -6px;
 }
 
@@ -5304,7 +5304,7 @@ select {
     }
 }
 @media screen and (max-width: 767px) {
-     .cappa-header {
+     .Attentive-header {
         padding-top: 30px;
     }
     .header .caption h1 {
