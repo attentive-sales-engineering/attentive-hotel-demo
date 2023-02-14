@@ -53,8 +53,8 @@ $(function () {
     $(window).scroll(function () {
         var $this = $(this)
             , st = $this.scrollTop()
-            , navbar = $('.cappa-header')
-            , logo = $(".cappa-header .cappa-logo> img");
+            , navbar = $('.Attentive-header')
+            , logo = $(".Attentive-header .Attentive-logo> img");
         if (st > 150) {
             if (!navbar.hasClass('scrolled')) {
                 navbar.addClass('scrolled');
@@ -82,28 +82,28 @@ $(function () {
     
 
     // Menu Navigation    
-    $('.cappa-js-cappa-nav-toggle').on('click', function (e) {
+    $('.Attentive-js-Attentive-nav-toggle').on('click', function (e) {
         var $this = $(this);
         e.preventDefault();
         if ($('body').hasClass('menu-open')) {
             $this.removeClass('active');
-            $('.cappa-wrap .cappa-wrap-inner > ul > li').each(function (i) {
+            $('.Attentive-wrap .Attentive-wrap-inner > ul > li').each(function (i) {
                 var that = $(this);
                 setTimeout(function () {
                     that.removeClass('open');
                 }, i * 100);
             });
             setTimeout(function () {
-                $('.cappa-wrap').removeClass('cappa-wrap-show');
+                $('.Attentive-wrap').removeClass('Attentive-wrap-show');
             }, 300);
             $('body').removeClass('menu-open');
         }
         else {
-            $('.cappa-wrap').addClass('cappa-wrap-show');
+            $('.Attentive-wrap').addClass('Attentive-wrap-show');
             $this.addClass('active');
             $('body').addClass('menu-open');
             setTimeout(function () {
-                $('.cappa-wrap .cappa-wrap-inner > ul > li').each(function (i) {
+                $('.Attentive-wrap .Attentive-wrap-inner > ul > li').each(function (i) {
                     var that = $(this);
                     setTimeout(function () {
                         that.addClass('open');
@@ -114,7 +114,7 @@ $(function () {
     });
      
     // Sub Menu 
-    $('.cappa-menu li.cappa-menu-sub>a').on('click', function () {
+    $('.Attentive-menu li.Attentive-menu-sub>a').on('click', function () {
         $(this).removeAttr('href');
         var element = $(this).parent('li');
         if (element.hasClass('open')) {
@@ -131,7 +131,7 @@ $(function () {
             element.siblings('li').find('ul').slideUp();
         }
     });
-    $('.cappa-menu>ul>li.cappa-menu-sub>a').append('<span class="holder"></span>');
+    $('.Attentive-menu>ul>li.Attentive-menu-sub>a').append('<span class="holder"></span>');
     
     
 

@@ -43,7 +43,7 @@ $(function () {
     
      // Burger Menu 
     var burgerMenu = function () {
-        $('.js-cappa-nav-toggle').on('click', function (event) {
+        $('.js-Attentive-nav-toggle').on('click', function (event) {
             event.preventDefault();
             var $this = $(this);
             if ($('body').hasClass('offcanvas')) {
@@ -60,24 +60,24 @@ $(function () {
     // Click outside of offcanvass
     var mobileMenuOutsideClick = function () {
         $(document).click(function (e) {
-            var container = $("#cappa-aside, .js-cappa-nav-toggle");
+            var container = $("#Attentive-aside, .js-Attentive-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('offcanvas')) {
                     $('body').removeClass('offcanvas');
-                    $('.js-cappa-nav-toggle').removeClass('active');
+                    $('.js-Attentive-nav-toggle').removeClass('active');
                 }
             }
         });
         $(window).scroll(function () {
             if ($('body').hasClass('offcanvas')) {
                 $('body').removeClass('offcanvas');
-                $('.js-cappa-nav-toggle').removeClass('active');
+                $('.js-Attentive-nav-toggle').removeClass('active');
             }
         });
     };
     
     // Sub Menu 
-    $('.cappa-main-menu li.cappa-sub>a').on('click', function () {
+    $('.Attentive-main-menu li.Attentive-sub>a').on('click', function () {
         $(this).removeAttr('href');
         var element = $(this).parent('li');
         if (element.hasClass('open')) {
@@ -94,7 +94,7 @@ $(function () {
             element.siblings('li').find('ul').slideUp();
         }
     });
-    $('.cappa-main-menu>ul>li.cappa-sub>a').append('<span class="holder"></span>');
+    $('.Attentive-main-menu>ul>li.Attentive-sub>a').append('<span class="holder"></span>');
     
     // Document on load.
     $(function () {
