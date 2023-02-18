@@ -1,6 +1,8 @@
-// Page loaded - get localstorage items
 $(document).ready(function () {
+  // Page loaded - get localstorage items
   console.log('PAGE LOADED')
+  console.log('GET LOCAL STORAGE')
+
   let city = localStorage.getItem('city') || ''
   console.log('get city:', city)
 
@@ -16,12 +18,7 @@ $(document).ready(function () {
   let children = localStorage.getItem('children') || ''
   console.log('get children:', children)
 
-  let rooms = localStorage.getItem('rooms') || ''
-  console.log('get rooms:', rooms)
-})
-
-// Clicked submit button - set localstorage items
-$(document).ready(function () {
+  // Clicked submit button - set localstorage items
   $('#submit').click(function () {
     console.log('#SUBMIT CLICKED')
     console.log('SET LOCAL STORAGE')
@@ -45,9 +42,5 @@ $(document).ready(function () {
     children = document.querySelector('#children')?.value
     console.log('set children:', children)
     if (children) localStorage.setItem('children', children)
-
-    rooms = document.querySelector('#rooms')?.value
-    console.log('set rooms:', rooms)
-    if (rooms) localStorage.setItem('rooms', rooms)
   })
 })
