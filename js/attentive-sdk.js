@@ -1,14 +1,16 @@
-// Page loaded - get localstorage items
 $(document).ready(function () {
+  // Page loaded - get localstorage items
   console.log('PAGE LOADED')
+  console.log('GET LOCAL STORAGE')
+
   let city = localStorage.getItem('city') || ''
   console.log('get city:', city)
 
-  let checkin = localStorage.getItem('checkin') || ''
-  console.log('get checkin:', checkin)
+  let checkIn = localStorage.getItem('checkIn') || ''
+  console.log('get checkIn:', checkIn)
 
-  let checkout = localStorage.getItem('checkout') || ''
-  console.log('get checkout:', checkout)
+  let checkOut = localStorage.getItem('checkOut') || ''
+  console.log('get checkOut:', checkOut)
 
   let adults = localStorage.getItem('adults') || ''
   console.log('get adults:', adults)
@@ -16,12 +18,7 @@ $(document).ready(function () {
   let children = localStorage.getItem('children') || ''
   console.log('get children:', children)
 
-  let rooms = localStorage.getItem('rooms') || ''
-  console.log('get rooms:', rooms)
-})
-
-// Clicked submit button - set localstorage items
-$(document).ready(function () {
+  // Clicked submit button - set localstorage items
   $('#submit').click(function () {
     console.log('#SUBMIT CLICKED')
     console.log('SET LOCAL STORAGE')
@@ -30,13 +27,13 @@ $(document).ready(function () {
     console.log('set city:', city)
     if (city) localStorage.setItem('city', city)
 
-    checkin = document.querySelector('#checkin')?.value
-    console.log('set checkin:', checkin)
-    if (checkin) localStorage.setItem('checkin', checkin)
+    checkIn = document.querySelector('#checkIn')?.value
+    console.log('set checkIn:', checkIn)
+    if (checkIn) localStorage.setItem('checkIn', checkIn)
 
-    checkout = document.querySelector('#checkout')?.value
-    console.log('set checkout:', checkout)
-    if (checkout) localStorage.setItem('checkout', checkout)
+    checkOut = document.querySelector('#checkOut')?.value
+    console.log('set checkOut:', checkOut)
+    if (checkOut) localStorage.setItem('checkOut', checkOut)
 
     adults = document.querySelector('#adults')?.value
     console.log('set adults:', adults)
@@ -45,9 +42,5 @@ $(document).ready(function () {
     children = document.querySelector('#children')?.value
     console.log('set children:', children)
     if (children) localStorage.setItem('children', children)
-
-    rooms = document.querySelector('#rooms')?.value
-    console.log('set rooms:', rooms)
-    if (rooms) localStorage.setItem('rooms', rooms)
   })
 })

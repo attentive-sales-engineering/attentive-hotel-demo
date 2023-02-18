@@ -125,32 +125,35 @@
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <label>First Name</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="text" placeholder="First Name">
+                                                <div class="input1_inner text_input">
+                                                    <input id="firstName" type="text" class="" placeholder="First Name">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <label>Last Name</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="text" placeholder="Last Name">
+                                                <div class="input1_inner text_input">
+                                                    <input id="lastName" type="text" class="text"
+                                                        placeholder="Last Name">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="input1_wrapper">
                                                 <label>Email Address</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="text" placeholder="Email Address">
+                                                <div class="input1_inner text_input">
+                                                    <input id="email" type="text" class="text"
+                                                        placeholder="Email Address">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="input1_wrapper">
                                                 <label>Phone Number</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control" placeholder="Phone Number"
+                                                <div class="input1_inner text_input">
+                                                    <input id="phone" type="text" class="form-control"
+                                                        placeholder="Phone Number"
                                                         pattern="[+][0-9]{1,2}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required
                                                         oninvalid="this.setCustomValidity('Please use the following format: +1-123-456-7890')">
                                                 </div>
@@ -159,25 +162,27 @@
                                         <div class="col-md-12">
                                             <div class="input1_wrapper">
                                                 <label>Credit Card Number</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Credit Card Number">
+                                                <div class="input1_inner text_input">
+                                                    <input id="creditCardNumber" type="text" class="form-control"
+                                                        placeholder="Credit Card Number" value="4000 1111 2222 3333">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <label>Expiration Date</label>
-                                                <div class="input1_inner">
-                                                    <input type="month" class="text" placeholder="Expiration Date">
+                                                <div class="input1_inner text_input">
+                                                    <input id="expDate" type="month" class="text"
+                                                        placeholder="Expiration Date">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <label>CVC</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="text" placeholder="CVC">
+                                                <div class="input1_inner text_input">
+                                                    <input id="cvc" type="text" class="text" placeholder="CVC"
+                                                        value="123">
                                                 </div>
                                             </div>
                                         </div>
@@ -185,14 +190,16 @@
                                             <div class="input1_wrapper">
                                                 <label>Location</label>
                                                 <div class="select1_wrapper">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="New York">Location</option>
-                                                        <option value="New York">New York</option>
-                                                        <option value="Miami">Miami</option>
-                                                        <option value="London">London</option>
-                                                        <option value="Mexico City">Mexico City</option>
-                                                        <option value="Sydney">Sydney</option>
-                                                    </select>
+                                                    <div class="select1_inner">
+                                                        <select id="city" class="select2 select" style="width: 100%">
+                                                            <option value="New York">Location</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="Miami">Miami</option>
+                                                            <option value="London">London</option>
+                                                            <option value="Mexico City">Mexico City</option>
+                                                            <option value="Sydney">Sydney</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -200,8 +207,8 @@
                                             <div class="input1_wrapper">
                                                 <label>Check in</label>
                                                 <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check in">
+                                                    <input id="checkIn" type="text"
+                                                        class="form-control input datepicker" placeholder="Check in">
                                                 </div>
                                             </div>
                                         </div>
@@ -209,8 +216,8 @@
                                             <div class="input1_wrapper">
                                                 <label>Check out</label>
                                                 <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check out">
+                                                    <input id="checkOut" type="text"
+                                                        class="form-control input datepicker" placeholder="Check out">
                                                 </div>
                                             </div>
                                         </div>
@@ -218,12 +225,12 @@
                                             <div class="select1_wrapper">
                                                 <label>Adults</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Adults</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
+                                                    <select id="adults" class="select2 select" style="width: 100%">
+                                                        <option value="1">Adults</option>
+                                                        <option value="1">1 Adult</option>
+                                                        <option value="2">2 Adults</option>
+                                                        <option value="3">3 Adults</option>
+                                                        <option value="4">4 Adults</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -232,12 +239,12 @@
                                             <div class="select1_wrapper">
                                                 <label>Children</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
+                                                    <select id="children" class="select2 select" style="width: 100%">
                                                         <option value="0">Children</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
+                                                        <option value="1">1 Child</option>
+                                                        <option value="2">2 Children</option>
+                                                        <option value="3">3 Children</option>
+                                                        <option value="4">4 Children</option>
                                                     </select>
                                                 </div>
                                             </div>
