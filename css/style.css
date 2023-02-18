@@ -3674,7 +3674,10 @@ button.mfp-arrow {
     background: #fff;
     color: #222 !important;
 }
-
+/* Hide calendar icon on text fields */
+.text_input:after {
+    content: "";
+}
 
 .select1_wrapper {
     margin-bottom: 0;
