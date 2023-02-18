@@ -6,11 +6,11 @@ $(document).ready(function () {
   let city = localStorage.getItem('city') || ''
   console.log('get city:', city)
 
-  let checkin = localStorage.getItem('checkin') || ''
-  console.log('get checkin:', checkin)
+  let checkIn = localStorage.getItem('checkIn') || ''
+  console.log('get checkIn:', checkIn)
 
-  let checkout = localStorage.getItem('checkout') || ''
-  console.log('get checkout:', checkout)
+  let checkOut = localStorage.getItem('checkOut') || ''
+  console.log('get checkOut:', checkOut)
 
   let adults = localStorage.getItem('adults') || ''
   console.log('get adults:', adults)
@@ -27,13 +27,13 @@ $(document).ready(function () {
     console.log('set city:', city)
     if (city) localStorage.setItem('city', city)
 
-    checkin = document.querySelector('#checkin')?.value
-    console.log('set checkin:', checkin)
-    if (checkin) localStorage.setItem('checkin', checkin)
+    checkIn = document.querySelector('#checkIn')?.value
+    console.log('set checkIn:', checkIn)
+    if (checkIn) localStorage.setItem('checkIn', checkIn)
 
-    checkout = document.querySelector('#checkout')?.value
-    console.log('set checkout:', checkout)
-    if (checkout) localStorage.setItem('checkout', checkout)
+    checkOut = document.querySelector('#checkOut')?.value
+    console.log('set checkOut:', checkOut)
+    if (checkOut) localStorage.setItem('checkOut', checkOut)
 
     adults = document.querySelector('#adults')?.value
     console.log('set adults:', adults)
