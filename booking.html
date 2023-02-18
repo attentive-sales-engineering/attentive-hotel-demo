@@ -153,9 +153,7 @@
                                                 <label>Phone Number</label>
                                                 <div class="input1_inner text_input">
                                                     <input id="phone" type="text" class="form-control"
-                                                        placeholder="Phone Number"
-                                                        pattern="[+][0-9]{1,2}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required
-                                                        oninvalid="this.setCustomValidity('Please use the following format: +1-123-456-7890')">
+                                                        placeholder="10-digit Phone Number (e.g. 1234567890)" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,8 +170,8 @@
                                             <div class="input1_wrapper">
                                                 <label>Expiration Date</label>
                                                 <div class="input1_inner text_input">
-                                                    <input id="expDate" type="month" class="text"
-                                                        placeholder="Expiration Date">
+                                                    <input id="expDate" type="text" class="text"
+                                                        placeholder="Expiration Date" value="05/2024">
                                                 </div>
                                             </div>
                                         </div>
@@ -189,17 +187,8 @@
                                         <div class="col-md-12">
                                             <div class="input1_wrapper">
                                                 <label>Location</label>
-                                                <div class="select1_wrapper">
-                                                    <div class="select1_inner">
-                                                        <select id="city" class="select2 select" style="width: 100%">
-                                                            <option value="New York">Location</option>
-                                                            <option value="New York">New York</option>
-                                                            <option value="Miami">Miami</option>
-                                                            <option value="London">London</option>
-                                                            <option value="Mexico City">Mexico City</option>
-                                                            <option value="Sydney">Sydney</option>
-                                                        </select>
-                                                    </div>
+                                                <div class="input1_inner text_input">
+                                                    <input id="city" type="text" class="" placeholder="City" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -207,8 +196,8 @@
                                             <div class="input1_wrapper">
                                                 <label>Check in</label>
                                                 <div class="input1_inner">
-                                                    <input id="checkIn" type="text"
-                                                        class="form-control input datepicker" placeholder="Check in">
+                                                    <input id="checkIn" type="text" class="" placeholder="Check in"
+                                                        readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,36 +205,26 @@
                                             <div class="input1_wrapper">
                                                 <label>Check out</label>
                                                 <div class="input1_inner">
-                                                    <input id="checkOut" type="text"
-                                                        class="form-control input datepicker" placeholder="Check out">
+                                                    <input id="checkOut" type="text" class="" placeholder="Check out"
+                                                        readonly>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="select1_wrapper">
+                                            <div class="input1_wrapper">
                                                 <label>Adults</label>
-                                                <div class="select1_inner">
-                                                    <select id="adults" class="select2 select" style="width: 100%">
-                                                        <option value="1">Adults</option>
-                                                        <option value="1">1 Adult</option>
-                                                        <option value="2">2 Adults</option>
-                                                        <option value="3">3 Adults</option>
-                                                        <option value="4">4 Adults</option>
-                                                    </select>
+                                                <div class="input1_inner text_input">
+                                                    <input id="adults" type="text" class="" placeholder="0 Adults"
+                                                        readonly>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="select1_wrapper">
+                                            <div class="input1_wrapper">
                                                 <label>Children</label>
-                                                <div class="select1_inner">
-                                                    <select id="children" class="select2 select" style="width: 100%">
-                                                        <option value="0">Children</option>
-                                                        <option value="1">1 Child</option>
-                                                        <option value="2">2 Children</option>
-                                                        <option value="3">3 Children</option>
-                                                        <option value="4">4 Children</option>
-                                                    </select>
+                                                <div class="input1_inner text_input">
+                                                    <input id="children" type="text" class="" placeholder="0 Children"
+                                                        readonly>
                                                 </div>
                                             </div>
                                         </div>
