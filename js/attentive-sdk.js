@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  // TODO figure out how to capture user phone below
+  const ATTN_PHONE = '+12063996576'
+
   // Page loaded - get localstorage items
   console.log('PAGE LOADED -> ', window.location.pathname)
 
@@ -53,7 +56,7 @@ $(document).ready(function () {
         }
       ],
       user: {
-        phone: '+12063996576'
+        phone: ATTN_PHONE
       }
     })
   }
@@ -98,7 +101,7 @@ $(document).ready(function () {
           }
         ],
         user: {
-          phone: '+12063996576'
+          phone: ATTN_PHONE
         }
       })
     } else if (window.location.pathname.match('booking')) {
@@ -117,10 +120,10 @@ $(document).ready(function () {
           }
         ],
         order: {
-          orderId: 'order-ny-js-1'
+          orderId: 'order-1'
         },
         user: {
-          phone: '+12063996576'
+          phone: ATTN_PHONE
         }
       })
     }
