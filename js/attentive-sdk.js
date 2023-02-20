@@ -1,45 +1,76 @@
 $(document).ready(function () {
-  // TODO figure out how to capture user phone below
-  const ATTN_PHONE = '+12063996576'
-
   // Page loaded - get localstorage items
   console.log('PAGE LOADED -> ', window.location.pathname)
 
-  const firstName = localStorage.getItem('firstName') || 'Fred'
+  let firstName = localStorage.getItem('firstName') || 'Sally'
   // console.log('get firstName:', firstName)
   const firstNameElement = document.querySelector('#firstName')
 
-  const lastName = localStorage.getItem('lastName') || 'Flinstone'
+  let lastName = localStorage.getItem('lastName') || 'Smith'
   // console.log('get lastName:', lastName)
   const lastNameElement = document.querySelector('#lastName')
 
-  const email = localStorage.getItem('email') || 'fred@attentive.com'
+  let email = localStorage.getItem('email') || 'fred@attentive.com'
   // console.log('get email:', email)
   const emailElement = document.querySelector('#email')
 
-  const phone = localStorage.getItem('phone') || '2065551212'
+  let phone = localStorage.getItem('phone') || '+12065551212'
   // console.log('get phone:', phone)
   const phoneElement = document.querySelector('#phone')
 
-  const city = localStorage.getItem('city') || 'New York'
+  let city = localStorage.getItem('city') || 'New York'
   // console.log('get city:', city)
   const cityElement = document.querySelector('#city')
 
-  const checkIn = localStorage.getItem('checkIn') || '03/01/2023'
+  let checkIn = localStorage.getItem('checkIn') || '03/01/2023'
   // console.log('get checkIn:', checkIn)
   const checkInElement = document.querySelector('#checkIn')
 
-  const checkOut = localStorage.getItem('checkOut') || '03/02/2023'
+  let checkOut = localStorage.getItem('checkOut') || '03/02/2023'
   // console.log('get checkOut:', checkOut)
   const checkOutElement = document.querySelector('#checkOut')
 
-  const adults = localStorage.getItem('adults') || '1 Adult'
+  let adults = localStorage.getItem('adults') || '1 Adult'
   // console.log('get adults:', adults)
   const adultsElement = document.querySelector('#adults')
 
-  const children = localStorage.getItem('children') || ''
+  let children = localStorage.getItem('children') || ''
   // console.log('get children:', children)
   const childrenElement = document.querySelector('#children')
+
+  // Event listener to process messages from sign-up unit via postMessage()
+  window.addEventListener('message', e => {
+    console.log(e)
+    // EMAIL
+    if (e.data.__attentive.email) {
+      console.log('e.data.__attentive.email: ' + e.data.__attentive.email)
+      email = e.data.__attentive.email
+      localStorage.setItem('email', email)
+    }
+    // PHONE
+    if (e.data.__attentive.phone) {
+      console.log('e.data.__attentive.phone: ' + e.data.__attentive.phone)
+      phone = e.data.__attentive.phone
+      localStorage.setItem('phone', phone)
+    }
+    // METADATA
+    if (e.data.__attentive.metadata) {
+      console.log(
+        'e.data.__attentive.metadata: ' +
+          JSON.stringify(e.data.__attentive.metadata, null, 2)
+      )
+      // CITY
+      if (e.data.__attentive.metadata['Preferred Location']) {
+        console.log(
+          'e.data.__attentive.metadata["Preferred Location"]: ' +
+            e.data.__attentive.metadata['Preferred Location']
+        )
+        city = e.data.__attentive.metadata['Preferred Location']
+        localStorage.setItem('city', city)
+      }
+    }
+    // console.log('e.data: ' + JSON.stringify(e.data, null, 2))
+  })
 
   if (window.location.pathname.match('room-details')) {
     console.log('ROOM DETAILS PAGE -> PRODUCT VIEW SDK')
@@ -56,7 +87,7 @@ $(document).ready(function () {
         }
       ],
       user: {
-        phone: ATTN_PHONE
+        phone: phone
       }
     })
   }
@@ -101,7 +132,7 @@ $(document).ready(function () {
           }
         ],
         user: {
-          phone: ATTN_PHONE
+          phone: phone
         }
       })
     } else if (window.location.pathname.match('booking')) {
@@ -123,7 +154,7 @@ $(document).ready(function () {
           orderId: 'order-1'
         },
         user: {
-          phone: ATTN_PHONE
+          phone: phone
         }
       })
     }
