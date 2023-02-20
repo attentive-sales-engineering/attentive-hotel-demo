@@ -1,62 +1,77 @@
 $(document).ready(function () {
   // Page loaded - get localstorage items
   console.log('PAGE LOADED')
-  console.log('GET LOCAL STORAGE & SET FORM VALUES')
+  console.log('window.location.pathname: ', window.location.pathname)
 
-  let firstName = localStorage.getItem('firstName') || 'Fred'
+  const firstName = localStorage.getItem('firstName') || 'Fred'
   console.log('get firstName:', firstName)
-  let firstNameElement = document.querySelector('#firstName')
-  if (firstNameElement) firstNameElement.value = firstName
+  const firstNameElement = document.querySelector('#firstName')
 
-  let lastName = localStorage.getItem('lastName') || 'Flinstone'
+  const lastName = localStorage.getItem('lastName') || 'Flinstone'
   console.log('get lastName:', lastName)
-  let lastNameElement = document.querySelector('#lastName')
-  if (lastNameElement) lastNameElement.value = lastName
+  const lastNameElement = document.querySelector('#lastName')
 
-  let email = localStorage.getItem('email') || 'fred@attentive.com'
+  const email = localStorage.getItem('email') || 'fred@attentive.com'
   console.log('get email:', email)
-  let emailElement = document.querySelector('#email')
-  if (emailElement) emailElement.value = email
+  const emailElement = document.querySelector('#email')
 
-  let phone = localStorage.getItem('phone') || '2065551212'
+  const phone = localStorage.getItem('phone') || '2065551212'
   console.log('get phone:', phone)
-  let phoneElement = document.querySelector('#phone')
-  if (phoneElement) phoneElement.value = phone
+  const phoneElement = document.querySelector('#phone')
 
-  let city = localStorage.getItem('city') || 'New York'
+  const city = localStorage.getItem('city') || 'New York'
   console.log('get city:', city)
-  let cityElement = document.querySelector('#city')
-  if (cityElement) cityElement.value = city
+  const cityElement = document.querySelector('#city')
 
-  let checkIn = localStorage.getItem('checkIn') || '03/01/2023'
+  const checkIn = localStorage.getItem('checkIn') || '03/01/2023'
   console.log('get checkIn:', checkIn)
-  let checkInElement = document.querySelector('#checkIn')
-  if (checkInElement) checkInElement.value = checkIn
+  const checkInElement = document.querySelector('#checkIn')
 
-  let checkOut = localStorage.getItem('checkOut') || '03/02/2023'
+  const checkOut = localStorage.getItem('checkOut') || '03/02/2023'
   console.log('get checkOut:', checkOut)
-  let checkOutElement = document.querySelector('#checkOut')
-  if (checkOutElement) checkOutElement.value = checkOut
+  const checkOutElement = document.querySelector('#checkOut')
 
-  let adults = localStorage.getItem('adults') || '1 Adult'
+  const adults = localStorage.getItem('adults') || '1 Adult'
   console.log('get adults:', adults)
-  let adultsElement = document.querySelector('#adults')
-  if (adultsElement) adultsElement.value = adults
+  const adultsElement = document.querySelector('#adults')
 
-  let children = localStorage.getItem('children') || ''
+  const children = localStorage.getItem('children') || ''
   console.log('get children:', children)
-  let childrenElement = document.querySelector('#children')
-  if (childrenElement) childrenElement.value = children
+  const childrenElement = document.querySelector('#children')
+
+  if (window.location.pathname == '/booking.html') {
+    console.log('BOOKING PAGE')
+    console.log('GET LOCAL STORAGE & SET FORM VALUES')
+    if (firstNameElement) firstNameElement.value = firstName
+    if (lastNameElement) lastNameElement.value = lastName
+    if (emailElement) emailElement.value = email
+    if (phoneElement) phoneElement.value = phone
+    if (cityElement) cityElement.value = city
+    if (checkInElement) checkInElement.value = checkIn
+    if (checkOutElement) checkOutElement.value = checkOut
+    if (adultsElement) adultsElement.value = adults
+    if (childrenElement) childrenElement.value = children
+  }
 
   // Clicked submit button - set localstorage items
-  $('#submit').click(function () {
-    console.log('#SUBMIT CLICKED')
-    console.log('SET LOCAL STORAGE')
+  $('button[type="submit"').click(function () {
+    console.log('SUBMIT CLICKED')
 
-    localStorage.setItem('city', cityElement.value)
-    localStorage.setItem('checkIn', checkInElement.value)
-    localStorage.setItem('checkOut', checkOutElement.value)
-    localStorage.setItem('adults', adultsElement.value)
-    localStorage.setItem('children', childrenElement.value)
+    if (
+      window.location.pathname == '/index.html' ||
+      window.location.pathname == '/room-details.html'
+    ) {
+      console.log('SET LOCAL STORAGE')
+      localStorage.setItem('city', cityElement.value)
+      localStorage.setItem('checkIn', checkInElement.value)
+      localStorage.setItem('checkOut', checkOutElement.value)
+      localStorage.setItem('adults', adultsElement.value)
+      localStorage.setItem('children', childrenElement.value)
+      // ADD TO CART SDK
+      console.log('ADD TO CART SDK')
+    } else if (window.location.pathname == '/booking.html') {
+      // PURCHASE SDK
+      console.log('PURCHASE SDK')
+    }
   })
 })
