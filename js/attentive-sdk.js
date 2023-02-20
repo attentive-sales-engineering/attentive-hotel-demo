@@ -22,11 +22,16 @@ $(document).ready(function () {
   // console.log('get city:', city)
   const cityElement = document.querySelector('#city')
 
-  let checkIn = localStorage.getItem('checkIn') || '03/01/2023'
+  //sets default check-in to today + 7 days and check-out to today + 8 days
+  let today = new Date()
+  today.setDate(today.getDate() + 7);
+  let checkIn = localStorage.getItem('checkIn') || today.toISOString().slice(0, 10)
+
   // console.log('get checkIn:', checkIn)
   const checkInElement = document.querySelector('#checkIn')
 
-  let checkOut = localStorage.getItem('checkOut') || '03/02/2023'
+  today.setDate(today.getDate() + 1);
+  let checkOut = localStorage.getItem('checkOut') || today.toISOString().slice(0, 10)
   // console.log('get checkOut:', checkOut)
   const checkOutElement = document.querySelector('#checkOut')
 
