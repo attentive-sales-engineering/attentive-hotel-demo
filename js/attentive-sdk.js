@@ -43,6 +43,22 @@ $(document).ready(function () {
     console.log('ROOM DETAILS PAGE')
     console.log('PRODUCT VIEW SDK')
     // PRODUCT VIEW SDK
+    window.attentive.analytics.productView({
+      items: [
+        {
+          productId: 'ny-js-1',
+          productVariantId: 'ny-js-2',
+          name: 'New York - Junior Suite',
+          price: {
+            value: '399',
+            currency: 'USD'
+          }
+        }
+      ],
+      user: {
+        phone: '+12063996576'
+      }
+    })
   }
 
   if (window.location.pathname.match('booking.html')) {
