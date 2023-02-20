@@ -39,7 +39,13 @@ $(document).ready(function () {
   console.log('get children:', children)
   const childrenElement = document.querySelector('#children')
 
-  if (window.location.pathname == '/booking.html') {
+  if (window.location.pathname.match('room-details')) {
+    console.log('ROOM DETAILS PAGE')
+    console.log('PRODUCT VIEW SDK')
+    // PRODUCT VIEW SDK
+  }
+
+  if (window.location.pathname.match('booking.html')) {
     console.log('BOOKING PAGE')
     console.log('GET LOCAL STORAGE & SET FORM VALUES')
     if (firstNameElement) firstNameElement.value = firstName
@@ -58,9 +64,10 @@ $(document).ready(function () {
     console.log('SUBMIT CLICKED')
 
     if (
-      window.location.pathname == '/index.html' ||
-      window.location.pathname == '/room-details.html'
+      window.location.pathname.match('index') ||
+      window.location.pathname.match('room-details')
     ) {
+      console.log('MATCH INDEX OR ROOM-DETAILS')
       console.log('SET LOCAL STORAGE')
       localStorage.setItem('city', cityElement.value)
       localStorage.setItem('checkIn', checkInElement.value)
@@ -69,8 +76,9 @@ $(document).ready(function () {
       localStorage.setItem('children', childrenElement.value)
       // ADD TO CART SDK
       console.log('ADD TO CART SDK')
-    } else if (window.location.pathname == '/booking.html') {
+    } else if (window.location.pathname.match('booking')) {
       // PURCHASE SDK
+      console.log('MATCH BOOKING')
       console.log('PURCHASE SDK')
     }
   })
