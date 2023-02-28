@@ -1,7 +1,4 @@
 # attentive-hotel-demo
- Example website integrated with Attentive messaging
+This is a branded hotel environment integrated with the Attentive SMS platform. Click the link below to access the website:
 
-- [Documentation](Documentation/index.html)
-- [demo1](demo1/index.html)
-
-hello world
+[Website](index.html)
