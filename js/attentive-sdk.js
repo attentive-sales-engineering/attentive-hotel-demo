@@ -10,7 +10,7 @@ $(document).ready(function () {
   // console.log('get lastName:', lastName)
   const lastNameElement = document.querySelector('#lastName')
 
-  let email = localStorage.getItem('email') || 'fred@attentive.com'
+  let email = localStorage.getItem('email') || 'ssmithtest@attentive.com'
   // console.log('get email:', email)
   const emailElement = document.querySelector('#email')
 
