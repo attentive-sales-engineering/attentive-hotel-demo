@@ -49,7 +49,11 @@ $(document).ready(function () {
 
   // Event listener to process messages from sign-up unit via postMessage()
   window.addEventListener('message', e => {
+    console.log('postMessage():')
+    console.log('ORIGIN:', e.origin)
+    console.log('ACTION:', e.data.__attentive.action)
     console.log(e)
+    // console.log('DATA: ' + JSON.stringify(e.data, null, 2))
     // EMAIL
     if (e.data.__attentive.email) {
       console.log('e.data.__attentive.email: ' + e.data.__attentive.email)
@@ -78,7 +82,6 @@ $(document).ready(function () {
         localStorage.setItem('city', city)
       }
     }
-    // console.log('e.data: ' + JSON.stringify(e.data, null, 2))
   })
 
   if (window.location.pathname.match('room-details')) {
