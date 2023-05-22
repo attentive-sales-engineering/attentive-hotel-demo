@@ -1,22 +1,22 @@
 # attentive-hotel-demo
-This is a branded hotel environment integrated with the Attentive SMS platform. 
+This is a branded hotel demo environment integrated with the Attentive SMS platform. 
 
-<<<<<<< Updated upstream
-Click the link below to access the website:
-    [DEMO](https://johnchaffee.github.io/attentive-hotel-demo/index.html)
+Click the link below to view the website:
+
+- [Attentive Hotel Demo](https://attentive-sales-engineering.github.io/attentive-hotel-demo/index.html)
 
 To experience the demo via SMS:
-    Text DEMO to +1-833-461-3262
-=======
-- [Documentation](Documentation/index.html)
-- [demo1](demo1/index.html)
-- [demo2](demo2/index.html)
-- [demo3](demo3/index.html)
-- [demo4](demo4/index.html)
-- [demo5](demo5/index.html)
-- [demo6](demo6/index.html)
-- [demo7](demo7/index.html)
-- [demo8](demo8/index.html)
-- Sameer Test
-- EDIT@!!#$!
->>>>>>> Stashed changes
+
+- Text `DEMO` to +1-833-461-3262
+
+# How it works
+
+- Static HTML site
+- Attentive Tag embeded on each page to track events and present Sign-Up Unit to new visitors to captture email and sms subscribers
+  - `<script src="//cdn.attn.tv/attentivehoteldemo/dtag.js"></script>`
+- `js/attentive-sdk.js` captures and stores user input (e.g. dates and locations) in local storage and triggers Attentive SDK events when user performs various actions
+  - `postMessage()` - captures data (email, phone) from the Sign-Up Unit iframe
+  - `window.attentive.analytics.productView` - captures product view events
+  - `window.attentive.analytics.addToCart` - captures add to cart events
+  - `window.attentive.analytics.purchase` - captures purchase events
+- Attentive captures the subscriber data from the Sign-Up Unit, and events from the SDK, and triggers SMS Journeys
